@@ -11,6 +11,7 @@ namespace BubbleSorter
     {
         static void Main(string[] args)
         {
+            int itterations = 0;
             int delay;
             int visualize;
             bool isdone = false;
@@ -152,7 +153,7 @@ namespace BubbleSorter
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
-
+                        itterations++;
                     }
                     if (visualize == 1)
                     {
@@ -172,7 +173,8 @@ namespace BubbleSorter
                 printarray();
             }
 
-            Console.WriteLine("\nDone!" +
+            Console.WriteLine("\nDone!" + 
+                "\nItterations: "+ itterations +
                 "\nPress Enter to Exit");
             Console.ReadKey();
         }
